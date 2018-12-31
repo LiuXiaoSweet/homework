@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+            width:200px;
+            height:200px;
+            background:red;
+            margin:100px auto;
+        }
+	</style>
+	<body>
+		<input type="button" name="btn" value="btn" id="btn" value="" />
+		<div></div>
+	</body>
+</html>
+<script src="js/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		function change(x=500,y=30){
+			//alert(1)
+			$('div').animate({
+				width:x+"px"
+			},y)
+		}		
+
+		$("#btn").click(function(){
+			change(700,2000)
+		});
+	})
+	
+	
+	{
+		function test(x,y=5){
+			console.log("默认值:",x,y);
+		}
+		test(5,10);
+	}
+	
+	{
+		function test(x,y="world",c="hello"){
+			console.log("默认值:",x,y,c);
+		};
+		test("hello");
+	}
+</script>

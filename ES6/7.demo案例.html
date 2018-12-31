@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+		<style type="text/css">
+			div{
+				width:200px;
+	            height:200px;
+	            background:red;
+	            float:left;
+	            margin:50px;
+	            font-size:40px;
+	            color:#fff;
+	            text-align:center;
+	            line-height:200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>第一个</div>
+		<div>第二个</div>
+		<div>第三个</div>
+	</body>
+</html>
+<script type="text/javascript">
+	let aDiv= document.getElementsByTagName("div");
+	for (let i=0;i<aDiv.length;i++) {
+		aDiv[i].onclick=function(){
+			for (let i=0;i<aDiv.length;i++) {
+				aDiv[i].style.background="red";
+			}
+			aDiv[i].style.background="yellow"
+		};
+	};
+</script>
