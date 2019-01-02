@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对象的解构赋值4</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	{
+//		let obj={
+//			p:[
+//			    'hello',
+//			    {y:'world'}
+//			]
+//		};
+//		let {p:[x,{y}]} = obj;
+//		console.log(x,y);
+		
+		
+//		let {p:[x,{y}]}={p:['hello',{y:'world'}]};
+//		let obj={obj1:{name:"jack"},obj2:{age:20}};
+//		let {obj1:{name},obj2:{age}} =  {obj1 : {name : "jack"},obj2 : {age : 20}};
+
+    	let {obj1,obj2 : {age}} = {obj1:{name:"jack"},obj2:{age:20}};
+    	console.log(obj1,age);
+		
+	}
+</script>

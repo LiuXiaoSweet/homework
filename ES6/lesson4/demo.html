@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		 <style>
+	        div{
+	            width:200px;
+	            height:200px;
+	          /*  background: red;*/
+	            margin:100px auto;
+	            border:2px solid #ccc;
+	        }
+	    </style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//	let div1=document.getElementsByTagName("div");
+//	
+//	let [Y,G,P,Pk] = ["yellow","green","purple","pink"];
+//
+//	 function changeStyle({obj,attr,value}) {
+//      obj.style[attr] = value;
+//  }
+
+//  div1[0].onclick = function () {
+//      changeStyle({obj : this, attr : "background", value : Y})
+//  }
+// 
+// div1[1].onclick = function () {
+//     changeStyle({obj : this, attr : "width", value : "500px"})
+// }
+// 
+// div1[2].onclick = function () {
+//      changeStyle({obj : this, attr : "background", value : G})
+//  }
+// 
+// div1[3].onclick = function () {
+//     changeStyle({obj : this, attr : "background", value : P})
+// }
+      
+    
+    
+    
+	let div1=document.getElementsByTagName("div");
+	
+	let [Y,G,P,Pk] = ["yellow","green","purple","pink"];
+
+	 function changeStyle([obj,attr,value]) {
+        obj.style[attr] = value;
+    }
+
+    div1[0].onclick = function () {
+        changeStyle([this,"background",Y])
+    }
+   
+   div1[1].onclick = function () {
+       changeStyle( [this,"width", "500px"])
+   }
+   
+   div1[2].onclick = function () {
+        changeStyle( [this,"background",G])
+    }
+   
+   div1[3].onclick = function () {
+       changeStyle( [this,"background",P])
+   }
+      
+</script>
