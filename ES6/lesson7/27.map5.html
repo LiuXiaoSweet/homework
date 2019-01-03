@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 
+	</body>
+</html>
+<script type="text/javascript">
+    //由复杂方法到简单方法
+	let arr = [12,23,45,65,32,54,76,98];
+	
+//	方法一:
+	/*let result = arr.map(function(item){
+		if (item>=60) {
+			item="及格"
+		} else{
+			item="不及格"
+		}
+		return item;
+	});*/
+	
+	
+//	方法二:
+	/*let result =arr.map(function(item){
+		return item = item>=60 ? "及格":"不及格"
+	});*/
+	
+//	方法三:
+  	/*let result =arr.map((item) => {
+  		return item = item>=60 ? "及格":"不及格"
+  	});*/
+  	
+//	方法四:
+ 	let result =arr.map(item => item =item>=60 ? "及格":"不及格")
+     
+		
+	console.log(result);
+	console.log(arr);
+	
+</script>
