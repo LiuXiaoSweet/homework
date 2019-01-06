@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="title"></p>
+	</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	function pro(url){
+	    return new Promise(function(resolve,reject){
+			$.ajax({
+				url:url,
+				success:function(response){
+					resolve(response);
+				},
+				error:function (err){
+					reject(err);
+				}
+			})
+		});
+	}
+	
+	Promise.all([
+		pro("https://resources.ninghao.net/wxapp-case/db.json"),
+		pro("data/server.json")
+	]).then(function(arr){
+		let [data1,data2] =arr;
+		console.log(data2);
+		title.innerHTML = data2.name
+	},function(err){
+		console.log(err);
+	})
+</script>
+
+
+

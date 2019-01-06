@@ -11,15 +11,17 @@
 </body>
 </html>
 <script>
+
     {
-        function tail(x) {
-            console.log("默认值为:"+x);
-        }
-        
-        function fx(x) {
-            tail(x)
+        var a = "user"
+        let obj = {
+            name : "jack",
+            [a + "age"] : 18
         };
-        fx("569")
+
+        console.log(obj.name,obj.userage)
+
+
     }
 
 </script>

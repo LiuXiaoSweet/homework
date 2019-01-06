@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="btn" id="btn" value="" autofocus/>
+	</body>
+</html>
+<script type="text/javascript">
+	
+	{
+		console.log(isFinite("1"))
+	}
+	{
+		btn.onblur=function(){
+			if(Number.isFinite(Number.parseFloat(this.value))){
+				console.log("正常")
+			}else{
+				console.log("超过最大值或者最小值")
+			}
+		}
+	}
+</script>

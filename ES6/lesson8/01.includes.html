@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			li{
+				width:150px;
+	            height:150px;
+	            border:1px solid #ccc;
+	            float:left;
+	            margin:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>我</li>
+			<li>想</li>
+			<li>好</li>
+			<li>好</li>
+			<li>学</li>
+			<li>习</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	
+//	let str ="我想好好学习";
+//	console.log(str.includes("学"));
+//	console.log(str.includes("hello"));
+
+
+
+	let str = "我想好好学习";
+	let li =document.querySelectorAll("li");
+	let result = Array.from(li,function(item){
+		return item;
+	})
+	let obj=result.filter(function(item){
+		if(str.includes("好") && item.textContent=="好"){
+//			return item;
+			 item.style.background="red";;
+		}
+	})
+//	obj[0].style.background="red";
+
+
+</script>

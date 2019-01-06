@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        html,body,ul,li{margin:0; padding:0;}
+	        ul{list-style:none;width:350px; margin:100px auto;}
+	        ul li{
+	            padding:15px 20px;
+	            border-bottom:1px dashed #ccc;
+	        }
+	        ul li i{
+	            display:block;
+	            text-align:right;
+	            padding:10px 0;
+	        }
+	    </style>
+		</head>
+	<body>
+		<input type="button" id="btn" value="笑话大全">
+	    <ul>
+	
+	    </ul>
+	</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	$("#btn").click(function(){
+		Promise.all([
+			url:"https://api.apishop.net/common/joke/getJokesByRandom?apiKey=PxPlhAH1fedfa9cb4057fbfb2bc891f76796c58f6ccb4e1",
+			data:{
+				pageSize:"20"
+			},
+		]),
+		$.ajax({
+			url:"https://api.apishop.net/common/aphorism/queryAphorismTitleList?apiKey=PxPlhAH1fedfa9cb4057fbfb2bc891f76796c58f6ccb4e1",
+			date:{
+				type:"1"
+			}
+		})
+	}).then(function(arr){
+		console.log(arr);
+		let[xyDaya] = arr;
+		let data =JSON.parse(xyDaya).result; //parse将字符串转化为对象
+		
+		for(let [index,value] of data.entries()){
+			let $li =$(`
+				<li>
+					${value.content}
+					<li>${value.updateTime}</li>
+				</li>
+			`)
+			$("ul").append($li)
+		};
+	},function(err){
+		Console.log(err)
+	})
+</script>

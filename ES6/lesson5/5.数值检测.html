@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+	        div{
+	            width:200px;
+	            height:200px;
+	            border:2px solid #ccc;
+	            margin:100px auto;
+	        }
+	    </style>
+	</head>
+	<body>
+	   <input type="text" id='btn' >
+	    <input type="button" id="sub" value="button">
+	
+	    <div id="box"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	
+	{
+		sub.onclick =function(){
+			let a =btn.value;
+			alert(a);
+			switch(Math.sign(a)) {
+				case 1:
+                    box.style.background = "red";
+                    break;
+                case -1:
+                    box.style.background = "#000";
+                    break;
+                default :
+                    box.style.background = "yellow"
+			}
+		}
+	}
+</script>

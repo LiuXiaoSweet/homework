@@ -15,16 +15,21 @@
     </style>
 </head>
 <body>
-    <script src="js/js/jquery.min.js"></script>
-    <script>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
         $(() => {
             var oDiv = document.getElementsByTagName("div")[0];
+            var num =10;
             oDiv.onclick = function () {
-                function demo(){
-                    alert(this)
-                }
-                demo()
+//              var _that = this;
+                setInterval( () => {
+                    num +=10;
+//                     alert(this)
+                    this.style.width = num + "px"
+                },30)
             }
+
+
         })
 
 

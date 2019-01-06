@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="btn" id="btn" value="" />
+		<input type="button" name="sub" id="sub" value="" />
+	</body>
+</html>
+<script type="text/javascript">
+	{
+		sub.onclick = function(){
+			let aV = Number.parseInt(this.value);
+			alert(typeof aV)
+			if(Number.isInteger(aV)){
+				alert("this is a int")
+			}else{
+				alert("this is not a int")
+			}
+		}
+	}
+</script>
